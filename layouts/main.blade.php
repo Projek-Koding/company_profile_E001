@@ -12,7 +12,7 @@
     <title>@yield('title') - XXX </title>
 </head>
 
-<body class="overflow-y: auto ">
+<body class="overflow-y: auto font-main">
     @yield('content')
 </body>
 
