@@ -14,8 +14,14 @@ export default {
         extend: {
             fontFamily: {
                 sans: ["Figtree", ...defaultTheme.fontFamily.sans],
+                main: ["Poppins"],
             },
         },
+        colors: {
+            'primary': '#064dac',
+            
+            // Tambahkan warna baru di sini
+          }
     },
     plugins: [require("flowbite/plugin")],
 };
