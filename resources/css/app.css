@@ -1,3 +1,68 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: italic;
+  font-weight: 400;
+  src: url('../fonts/Poppins/Poppins-Italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/Poppins/Poppins-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: italic;
+  font-weight: 700;
+  src: url('../fonts/Poppins/Poppins-BoldItalic.ttf') format('truetype');
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+  }
+  /* Tambahkan ini ke stylesheet Anda jika ingin lebih halus */
+#search-form {
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#search-form:not(.hidden) {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.navbar-menu {
+  padding: 8px 12px;
+  color: white;
+  border-radius: 8px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Animasi saat di-hover */
+.navbar-menu:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+  
+}
+
+/* Mengatur efek hanya pada elemen yang di-hover */
+.navbar-menu:not(:hover) {
+  transform: translateY(0);
+}
+
+
+
