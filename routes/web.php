@@ -21,6 +21,15 @@ Route::get('/berita', function () {
 Route::get('/berita/detail/{id}', function ($id) {
     $berita = Berita::where('id', $id)->first();
     return redirect('/berita/' . $berita->slug);
+
+// Route::get('/about-us', function () {
+//     return view('features/aboutUs');
+// });
+
+Route::get('/hubungi-kami', function () {
+    return view('features/hubungiKami');
+
+
 });
 
 
@@ -30,6 +39,7 @@ Route::get('/berita/detail/{id}', function ($id) {
 
 Route::get('/tentang', function () {
     return view('features/tentang');
+
 });
 
 
