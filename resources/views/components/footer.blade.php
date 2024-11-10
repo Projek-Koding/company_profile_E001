@@ -23,11 +23,12 @@
 		<div class="text-start max-md:text-center">
 			<h2 class="mb-4 text-start text-lg font-semibold text-white max-md:text-center">Link Cepat</h2>
 			<ul class="space-y-2">
-				<li><a href="#" class="hover:text-blue-400">Beranda</a></li>
-				<li><a href="#" class="hover:text-blue-400">Profil</a></li>
-				<li><a href="#" class="hover:text-blue-400">Berita</a></li>
-				<li><a href="#" class="hover:text-blue-400">Sekolah/Madrasah</a></li>
-				<li><a href="#" class="hover:text-blue-400">Download</a></li>
+				<li><a href="/" class="hover:text-blue-400">Beranda</a></li>
+				<li><a href="/profil" class="hover:text-blue-400">Profil</a></li>
+				<li><a href="/berita" class="hover:text-blue-400">Berita</a></li>
+                <li><a href="#" class="hover:text-blue-400">Pengumuman</a></li>
+				<li><a href="#" class="hover:text-blue-400">Madrasah</a></li>
+				<li><a href="/tentang" class="hover:text-blue-400">Tentang Kami</a></li>
 			</ul>
 		</div>
 
