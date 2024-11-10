@@ -11,6 +11,10 @@ Route::get('/profil', function () {
 Route::get('/berita', function () {
     return view('features/berita');
 });
-Route::get('/navbar', function () {
-    return view('components/navbar');
+Route::get('/about-us', function () {
+    return view('features/aboutUs');
+});
+
+Route::get('/hubungi-kami', function () {
+    return view('features/hubungiKami');
 });
