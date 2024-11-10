@@ -8,6 +8,7 @@ use App\Models\Pengumuman;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
+use Filament\Support\Enums\VerticalAlignment;
 use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
@@ -23,7 +24,11 @@ class PengumumanResource extends Resource
     {
         return $form
             ->schema([
-                //
+                Forms\Components\TextInput::make('judul')
+                    ->required(),
+                Forms\Components\TextInput::make('isi_pengumuman')
+                    ->required(),
+
             ]);
     }
 
@@ -31,7 +36,10 @@ class PengumumanResource extends Resource
     {
         return $table
             ->columns([
-                //
+                Tables\Columns\TextColumn::make('judul')
+                    ->verticalAlignment(VerticalAlignment::Start),
+                Tables\Columns\TextColumn::make('isi_pengumuman')
+                    ->wrap(),
             ])
             ->filters([
                 //

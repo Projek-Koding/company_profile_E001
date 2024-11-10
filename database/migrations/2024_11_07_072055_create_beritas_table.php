@@ -18,6 +18,7 @@ return new class extends Migration
             $table->text('isi_berita');
             $table->string('penulis');
             $table->string('gambar');
+            $table->integer('views')->nullable();
             $table->timestamps();
         });
     }
