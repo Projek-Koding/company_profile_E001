@@ -2,104 +2,50 @@
 @section('title', 'Berita')
 
 @section('content')
-	@include('components.navbar')
-	<div class="container-fluid overflow-hidden bg-gray-50">
-		<div class="container mx-auto mt-5 flex min-h-screen flex-col justify-center text-center max-md:px-7">
-			<h1 class="mb-2 text-5xl font-bold text-primary max-md:text-3xl">Halaman Berita</h1>
-			<p class="mb-5 text-primary">Berikut adalah berita terbaru yang dapat Anda baca lebih lanjut.</p>
-		</div>
-
+    @include('components.navbar')
+    @php
+        use Carbon\Carbon;
+    @endphp
+    <div class="container-fluid overflow-hidden bg-gray-50">
+        <div class="container mx-auto mt-5 flex min-h-screen flex-col justify-center text-center max-md:px-7">
+            <h1 class="mb-2 text-5xl font-bold text-primary max-md:text-3xl">Halaman Berita</h1>
+            <p class="mb-5 text-primary">Berikut adalah berita terbaru yang dapat Anda baca lebih lanjut.</p>
+        </div>
         <div class="container-fluid bg-primary">
             <div class="container mx-auto min-h-screen p-8">
-				<div class="grid grid-cols-4 grid-rows-2 gap-6 max-md:grid-cols-1">
-					
-                    @php
-                        // Data berita sebagai simulasi
-                        $beritaList = [
-                            [
-                                'id' => 1,
-                                'judul' => 'Judul Berita 1',
-                                'tanggal' => '5 November 2024',
-                                'deskripsi' => 'Deskripsi singkat berita 1...',
-                                'gambar' => 'https://awsimages.detik.net.id/community/media/visual/2022/07/13/ilustrasi-baca-berita_169.jpeg?w=1200'
-                            ],
-                            [
-                                'id' => 2,
-                                'judul' => 'Judul Berita 2',
-                                'tanggal' => '5 November 2024',
-                                'deskripsi' => 'Deskripsi singkat berita 2...',
-                                'gambar' => 'https://bbpmpsulsel.kemdikbud.go.id/assets/images/3afdf8eed4c601ca8ac8e4445194cf36.jpeg'
-                            ],
-                            [
-                                'id' => 3,
-                                'judul' => 'Judul Berita 3',
-                                'tanggal' => '5 November 2024',
-                                'deskripsi' => 'Deskripsi singkat berita 3...',
-                                'gambar' => 'https://asset-2.tstatic.net/makassar/foto/bank/images/Kuasa-hukum-Raymond-Kamil-1-7112024.jpg'
-                            ],
-                            [
-                                'id' => 4,
-                                'judul' => 'Judul Berita 4',
-                                'tanggal' => '5 November 2024',
-                                'deskripsi' => 'Deskripsi singkat berita 4...',
-                                'gambar' => 'https://www.suaramuhammadiyah.id/storage/posts/image/1000268498-20241107155308.jpg'
-                            ],
-                            [
-                                'id' => 5,
-                                'judul' => 'Judul Berita 5',
-                                'tanggal' => '5 November 2024',
-                                'deskripsi' => 'Deskripsi singkat berita 5...',
-                                'gambar' => 'https://pwmjateng.com/wp-content/uploads/2024/11/Gambar-WhatsApp-2024-11-08-pukul-15.02.49_e94bc7f2.jpg'
-                            ],
-                            [
-                                'id' => 6,
-                                'judul' => 'Judul Berita 6',
-                                'tanggal' => '5 November 2024',
-                                'deskripsi' => 'Deskripsi singkat berita 6...',
-                                'gambar' => 'https://muhammadiyah.or.id/wp-content/uploads/2024/11/Dubes-Malaysia-2-750x536.jpeg'
-                            ],
-                            [
-                                'id' => 7,
-                                'judul' => 'Judul Berita 7',
-                                'tanggal' => '5 November 2024',
-                                'deskripsi' => 'Deskripsi singkat berita 7...',
-                                'gambar' => 'https://akcdn.detik.net.id/visual/2018/04/12/7ed3616b-a2f6-4220-abe0-49112833c5d1_169.jpeg?w=650&q=90'
-                            ],
-                            [
-                                'id' => 8,
-                                'judul' => 'Judul Berita 8',
-                                'tanggal' => '5 November 2024',
-                                'deskripsi' => 'Deskripsi singkat berita 8...',
-                                'gambar'=> 'https://www.suaramuhammadiyah.id/storage/posts/image/UM_Sukabumi-20240505210504.jpeg'                            ]
-                        ];
-                    @endphp
-
+                <div class="grid grid-cols-4 grid-rows-2 gap-6 max-md:grid-cols-1">
                     {{-- Menggunakan foreach untuk loop card berita --}}
-                    @foreach($beritaList as $berita)
-                        <div class="overflow-hidden rounded-xl bg-white shadow-md">
-                            <img src="{{ $berita['gambar'] }}" alt="{{ $berita['judul'] }}" class="h-48 md:w-64 mx-auto mt-4 rounded-lg object-cover">
+                    @foreach ($beritaList as $berita)
+                        <div class="overflow-hidden rounded-xl h-full w-full bg-white shadow-md">
+                            <img src="{{ asset('/storage/' . $berita->gambar) }}" alt="{{ $berita->judul }}"
+                                class="h-48 md:w-64 mx-auto mt-4 rounded-lg object-cover">
                             <div class="p-4">
-                                <p class="mb-2 bg-gray-200 w-max p-2 rounded-md text-xs font-medium">{{ $berita['tanggal'] }}</p>
-                                <h3 class="mb-2 text-xl font-semibold">
-                                    <a href="{{ url('/berita/detail/' . $berita['id']) }}">{{ $berita['judul'] }}</a></h3>
-                                <p class="text-gray-600">{{ $berita['deskripsi'] }}</p>
+                                <p class="mb-2 bg-gray-200 w-max p-2 rounded-md text-xs font-medium">
+                                    {{ Carbon::parse($berita->created_at)->format('d F Y') }}</p>
+                                <h3 class="mb-2 text-xl font-semibold text-ellipsis overflow-clip">
+                                    <a href="{{ url('/berita/detail/' . $berita->id) }}">{{ $berita->judul }}</a>
+                                </h3>
+
                             </div>
                         </div>
                     @endforeach
 
-               
 
-				</div>
-                     {{-- Button Tampilkan Selengkapnya --}}
-                     <div class="flex justify-end mx-auto mt-5">
-                        <a href="{{ url('/berita/semua') }}" 
-                           class="inline-block rounded-lg bg-white px-6 py-3 text-primary font-semibold hover:bg-blue-200 transition">
-                            Tampilkan Selengkapnya >>
-                        </a>
-                    </div>
-			</div>
+
+                </div>
+                {{-- Button Tampilkan Selengkapnya --}}
+                <div class="flex pagination justify-end mx-auto mt-5">
+                    {{ $beritaList->links() }}
+                </div>
+
+                <style>
+                    .pagination p {
+                        visibility: hidden;
+                    }
+                </style>
+            </div>
         </div>
-	</div>
+    </div>
 
     @include('components.footer')
 @endsection

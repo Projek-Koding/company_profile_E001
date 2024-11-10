@@ -7,11 +7,13 @@ use App\Filament\Resources\BeritaResource\RelationManagers;
 use App\Models\Berita;
 use Filament\Forms;
 use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Form;
 use Filament\Forms\Set;
 use Illuminate\Support\Str;
 use Filament\Resources\Resource;
+use Filament\Support\Enums\VerticalAlignment;
 use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
@@ -33,12 +35,14 @@ class BeritaResource extends Resource
                     ->afterStateUpdated(fn(Set $set, ?string $state) => $set('slug', Str::slug($state))),
                 Forms\Components\TextInput::make('slug')
                     ->required(),
-                Textarea::make('isi_berita')
+                RichEditor::make('isi_berita')
                     ->required()
                     ->columnSpan(2),
                 Forms\Components\TextInput::make('penulis')
                     ->required(),
-                FileUpload::make('gambar'),
+                FileUpload::make('gambar')
+                    ->image()
+                    ->required(),
 
             ]);
     }
@@ -47,7 +51,13 @@ class BeritaResource extends Resource
     {
         return $table
             ->columns([
-                //
+                Tables\Columns\ImageColumn::make('gambar')
+                    ->verticalAlignment(VerticalAlignment::Start),
+                Tables\Columns\TextColumn::make('judul')
+                    ->verticalAlignment(VerticalAlignment::Start),
+                Tables\Columns\TextColumn::make('penulis')
+                    ->verticalAlignment(VerticalAlignment::Start),
+                Tables\Columns\TextColumn::make('isi_berita'),
             ])
             ->filters([
                 //
