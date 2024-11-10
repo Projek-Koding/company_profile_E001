@@ -4,9 +4,12 @@ use App\Models\Berita;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Route;
 
+
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('features/beranda');
 });
+
 Route::get('/profil', function () {
     return view('features/profil');
 });
@@ -24,3 +27,9 @@ Route::get('/berita/detail/{id}', function ($id) {
 // Route::get('/navbar', function () {
 //     return view('components/navbar');
 // });
+
+Route::get('/tentang', function () {
+    return view('features/tentang');
+});
+
+
