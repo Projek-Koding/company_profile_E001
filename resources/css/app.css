@@ -48,7 +48,7 @@ body {
 .navbar-menu {
   padding: 8px 12px;
   color: white;
-  border-radius: 8px;
+  border-radius: 0px;
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
