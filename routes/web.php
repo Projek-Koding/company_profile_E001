@@ -1,22 +1,48 @@
 <?php
 
+use App\Models\Berita;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Route;
 
 
-// Route::get('/profil', function () {
-//     return view('features/profil');
+
+
+
+Route::get('/', function () {
+    return view('features/beranda');
+});
+
+Route::get('/profil', function () {
+    return view('features/profil');
+});
+Route::get('/berita', function () {
+    $beritaList = Berita::paginate(8);
+    return view('features/berita', compact('beritaList'));
+});
+
+Route::get('/berita/detail/{id}', function ($id) {
+    $berita = Berita::where('id', $id)->first();
+    return redirect('/berita/' . $berita->slug);
+
+// Route::get('/about-us', function () {
+//     return view('features/aboutUs');
 // });
-// Route::get('/berita', function () {
-//     return view('features/berita');
+
+// Route::get('/hubungi-kami', function () {
+//     return view('features/hubungiKami');
+
+
 // });
-// Route::get('/beranda', function () {
-//     return view('features/beranda');
+
+
+// Route::get('/navbar', function () {
+//     return view('components/navbar');
 // });
-// Route::get('/tentang', function () {
-//     return view('features/tentang');
-// });
-Route::view('/', 'features/beranda')->name('beranda');
-Route::view('/profil', 'features/profil')->name('profil');
-Route::view('/berita', 'features/berita')->name('berita');
-Route::view('/tentang', 'features/tentang')->name('tentang');
+
+Route::get('/tentang', function () {
+    return view('features/tentang');
+
+});
+
+
 
