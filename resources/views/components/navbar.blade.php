@@ -17,6 +17,7 @@
 				<li class="duration-300 hover:scale-105"><a href="#" class="navbar-menu rounded-sm nav-link {{ Route::is('pengumuman') ? 'active' : '' }}">Pengumuman</a></li>
 				<li class="duration-300 hover:scale-105"><a href="#" class="navbar-menu rounded-sm nav-link {{ Route::is('madrasah') ? 'active' : '' }}">Madrasah</a></li>
 				<li class="duration-300 hover:scale-105"><a href="{{ route('tentang') }}" class="navbar-menu rounded-sm nav-link {{ Route::is('tentang') ? 'active' : '' }}">Tentang Kami</a></li>
+				<li class="duration-300 hover:scale-105"><a href="{{ route('kontak') }}" class="navbar-menu rounded-sm nav-link {{ Route::is('kontak') ? 'active' : '' }}">Kontak</a></li>
 
 			</ul>
 		</div>

@@ -11,7 +11,7 @@
 
             {{-- Hubungi Kami --}}
             <div class="flex-col gap-3 flex justify-start max-w-full mx-auto rounded-lg overflow-hidden">
-                <div class="self-stretch text-[#064dac] text-2xl font-bold">Hubungi Kami</div>
+                <div class="self-stretch text-[#064dac] text-2xl font-bold">Kontak</div>
                 <div class="self-stretch h-[0px] border border-[#e1e1e1]"></div>
                 <div class="self-stretch text-[#353535] text-sm font-normal  ">
                     Pimpinan Daerah Muhammadiyah Kabupaten Pinrang dapat dihubungi melalui kontak berikut
