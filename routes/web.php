@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Route;
 
 
 
+
+
 Route::get('/', function () {
     return view('features/beranda');
 });
@@ -26,11 +28,11 @@ Route::get('/berita/detail/{id}', function ($id) {
 //     return view('features/aboutUs');
 // });
 
-Route::get('/hubungi-kami', function () {
-    return view('features/hubungiKami');
+// Route::get('/hubungi-kami', function () {
+//     return view('features/hubungiKami');
 
 
-});
+// });
 
 
 // Route::get('/navbar', function () {
@@ -41,5 +43,6 @@ Route::get('/tentang', function () {
     return view('features/tentang');
 
 });
+
 
 
