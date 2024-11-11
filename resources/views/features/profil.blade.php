@@ -9,7 +9,7 @@
 	<div class="mx-auto w-full overflow-hidden lg:px-12">
 		<div class="container mx-auto mt-0 flex min-h-screen flex-col justify-center text-center max-md:px-7">
 			<h1 class="mb-2 text-5xl font-bold text-primary max-md:text-3xl">Profil</h1>
-			<p class="text-primary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda qui rem</p>
+			<p class="text-primary">Untuk mengenal Pimpnan Daerah Muhammadiah Pinrang Lebih Dalam</p>
 		</div>
 
 

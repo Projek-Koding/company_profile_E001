@@ -57,7 +57,10 @@ class BeritaResource extends Resource
                     ->verticalAlignment(VerticalAlignment::Start),
                 Tables\Columns\TextColumn::make('penulis')
                     ->verticalAlignment(VerticalAlignment::Start),
-                Tables\Columns\TextColumn::make('isi_berita'),
+                Tables\Columns\TextColumn::make('isi_berita')
+                    ->label('Isi Berita')
+                    ->formatStateUsing(fn($state) => Str::limit(strip_tags($state), 100))
+                    ->verticalAlignment(VerticalAlignment::Start),
             ])
             ->filters([
                 //
