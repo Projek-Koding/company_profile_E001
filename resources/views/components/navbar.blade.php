@@ -10,13 +10,13 @@
 
 		</div>
 		<div class="flex flex-row">
-			<ul class="hidden gap-2 text-white md:flex md:items-end">
-				<li class="duration-300 hover:scale-105"><a href="/" class="navbar-menu">Beranda</a></li>
-				<li class="duration-300 hover:scale-105"><a href="/profil" class="navbar-menu">Profil</a></li>
-				<li class="duration-300 hover:scale-105"><a href="/berita" class="navbar-menu">Berita</a></li>
-				<li class="duration-300 hover:scale-105"><a href="#" class="navbar-menu">Pengumuman</a></li>
-				<li class="duration-300 hover:scale-105"><a href="#" class="navbar-menu">Madrasah</a></li>
-				<li class="duration-300 hover:scale-105"><a href="/tentang" class="navbar-menu">Tentang Kami</a></li>
+			<ul class="hidden gap-2 rounded-sm text-white md:flex md:items-end">
+				<li class="duration-300 hover:scale-105"><a href="{{ route('beranda') }}" class="navbar-menu  nav-link {{ Route::is('beranda') ? 'active' : '' }}">Beranda</a></li>
+				<li class="duration-300 hover:scale-105"><a href="{{ route('profil') }}" class="navbar-menu rounded-sm nav-link {{ Route::is('profil') ? 'active' : '' }}">Profil</a></li>
+				<li class="duration-300 hover:scale-105"><a href="{{ route('berita') }}" class="navbar-menu rounded-sm nav-link {{ Route::is('berita') ? 'active' : '' }}">Berita</a></li>
+				<li class="duration-300 hover:scale-105"><a href="#" class="navbar-menu rounded-sm nav-link {{ Route::is('pengumuman') ? 'active' : '' }}">Pengumuman</a></li>
+				<li class="duration-300 hover:scale-105"><a href="#" class="navbar-menu rounded-sm nav-link {{ Route::is('madrasah') ? 'active' : '' }}">Madrasah</a></li>
+				<li class="duration-300 hover:scale-105"><a href="{{ route('tentang') }}" class="navbar-menu rounded-sm nav-link {{ Route::is('tentang') ? 'active' : '' }}">Tentang Kami</a></li>
 
 			</ul>
 		</div>
@@ -57,33 +57,7 @@
 
 <style>
 	/* Mengurangi ukuran font untuk tampilan mobile */
-	@media (max-width: 768px) {
-		#search-form input {
-			font-size: 0.875rem;
-			/* Ukuran font lebih kecil */
-		}
-
-		.logo {
-			/* Atur ukuran logo pada mode mobile */
-			font-size: 1rem;
-			/* Mengurangi ukuran logo */
-		}
-	}
-
-	/* Pastikan body dan html memiliki tinggi layar penuh tanpa overflow */
-	html,
-	body {
-		height: 100%;
-		margin: 0;
-		/* overflow: hidden; */
-	}
-
-	#search-form input::placeholder {
-		color: white;
-		/* Gunakan !important hanya jika diperlukan */
-		opacity: 1;
-		/* Menjaga opacity agar placeholder terlihat */
-	}
+	
 </style>
 
 <script>

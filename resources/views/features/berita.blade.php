@@ -2,46 +2,44 @@
 @section('title', 'Berita')
 
 @section('content')
-    @php
-        use Carbon\Carbon;
-    @endphp
-    <div class="container mx-0 overflow-hidden bg-gray-50">
+
+
+    <div class="w-full mx-auto overflow-hidden bg-gray-50">
+
         <div class="container mx-auto mt-5 flex min-h-screen flex-col justify-center text-center max-md:px-7 lg:w-11/12">
             <h1 class="mb-2 text-5xl font-bold text-primary max-md:text-3xl">Halaman Berita</h1>
             <p class="mb-5 text-primary">Berikut adalah berita terbaru yang dapat Anda baca lebih lanjut.</p>
         </div>
-
         {{-- Tambahkan form pencarian --}}
-        <div class="container mx-auto mb-10 bg-primary lg:w-11/12">
-            <div class="container mx-auto min-h-screen p-8">
-                <div class="grid grid-cols-4 grid-rows-2 gap-6  max-md:grid-cols-1">
+        <div class="w-full mx-auto mb-10 bg-primary">
+            <div class="w-11/12 mx-auto min-h-screen p-8">
+                <div class="grid grid-cols-4 grid-rows-2 gap-6 max-md:grid-cols-1">
+
                     {{-- Menggunakan foreach untuk loop card berita --}}
+
                     @foreach ($beritaList as $berita)
-                        <div class="overflow-hidden rounded-xl h-full w-full bg-white shadow-md p-4">
-                            <img src="{{ asset('/storage/' . $berita->gambar) }}" alt="{{ $berita->judul }}"
-                                class="h-48 md:w-64 mx-auto rounded-lg object-cover">
-                            <div>
-                                <p class="mb-2 bg-gray-200 w-max rounded-md text-xs font-medium">
-                                    {{ Carbon::parse($berita->created_at)->format('d F Y') }}</p>
-                                <h3 class="mb-2 text-xl font-semibold text-ellipsis overflow-clip">
-                                    <a href="{{ url('/berita/detail/' . $berita->id) }}">{{ $berita->judul }}</a>
+                        <div
+                            class="group relative rounded-xl transform bg-white text-primary shadow-md transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                            <img src="{{ $berita['gambar'] }}" alt="{{ $berita['judul'] }}"
+                                class=" h-48 rounded-t-xl w-full object-cover">
+                            <div class="p-5 ">
+                                <p class="mb-1 w-max  text-gray-500 text-xs font-medium">{{ $berita['tanggal'] }}</p>
+
+                                <h3
+                                    class=" text-lg hover:underline font-medium transition-colors duration-300 group-hover:text-yellow-400 line-clamp-2">
+                                    <a href="{{ url('/berita/detail/' . $berita['id']) }}">{{ $berita['judul'] }}</a>
+
                                 </h3>
+                                {{-- <p class="text-gray-700 mb-5 duration-300 text-xs group-hover:text-gray-800">
+                            {{ $berita['deskripsi'] }}
+                        </p> --}}
                             </div>
+
                         </div>
                     @endforeach
+
+
                 </div>
-                <div class="flex pagination gap-4 w-full justify-center mx-auto mt-5">
-                    {{ $beritaList->links() }}
-                </div>
-                <style>
-                    .pagination div p {
-                       color:white;
-                    }
-                </style>
+                @include('components/backToTopBtn')
             </div>
-        </div>
-    </div>
-
-
-
-@endsection
+        @endsection

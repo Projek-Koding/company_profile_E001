@@ -91,14 +91,14 @@
 			<div
 				class="container mx-auto mt-10 flex flex-wrap justify-center gap-8 max-md:mx-3 max-md:grid max-md:grid-cols-2 max-md:grid-rows-2 max-md:gap-2">
 				<!-- Anggota Tim 1 -->
-				<div class="flex w-64 flex-col items-center bg-primary p-6 max-md:w-fit">
+				<div class="flex w-64 rounded-sm flex-col items-center bg-primary p-6 max-md:w-fit">
 					<img src="{{ asset('img/ketua PDM.jpg') }}" alt="Ketua PDM" class="mb-4 h-28 w-28 rounded-full object-cover">
 					<h3 class="max-md:text-md text-md text-center font-semibold text-white">Andi Syamiluddin, S.Pd.,M.Pd. I</h3>
 					<p class="text-center text-xs text-white max-md:text-sm">Ketua Pimpinan Daerah Muhammadiyah</p>
 				</div>
 
 				<!-- Anggota Tim 2 -->
-				<div class="flex w-64 flex-col items-center bg-primary p-6 max-md:w-fit">
+				<div class="flex rounded-sm  w-64 flex-col items-center bg-primary p-6 max-md:w-fit">
 					<img src="{{ asset('img/Sekretaris-PDM.jpg') }}" alt="Nama Anggota 2"
 						class="mb-4 h-28 w-28 rounded-full object-cover">
 					<h3 class="max-md:text-md text-md text-center font-semibold text-white">Syaifuddin, SH., S.Pd., M.Pd</h3>
@@ -106,7 +106,7 @@
 				</div>
 
 				<!-- Anggota Tim 3 -->
-				<div class="flex w-64 flex-col items-center bg-primary p-6 max-md:w-fit">
+				<div class="flex w-64 rounded-sm  flex-col items-center bg-primary p-6 max-md:w-fit">
 					<img src="{{ asset('img/Kepala Disdakmen.jpg') }}" alt="Nama Anggota 3"
 						class="mb-4 h-28 w-28 rounded-full object-cover">
 					<h3 class="max-md:text-md text-md text-center font-semibold text-white">Nandi Matjtja Moenta, S.Sos</h3>
@@ -114,7 +114,7 @@
 				</div>
 
 				<!-- Anggota Tim 4 -->
-				<div class="flex w-64 flex-col items-center bg-primary p-6 max-md:w-fit">
+				<div class="flex w-64 flex-col rounded-sm  items-center bg-primary p-6 max-md:w-fit">
 					<img src="{{ asset('img/Sekretaris Disdakmen.jpg') }}" alt="Nama Anggota 4"
 						class="mb-4 h-28 w-28 rounded-full object-cover">
 					<h3 class="max-md:text-md text-md text-center font-semibold text-white">Nama Anggota 1</h3>
@@ -123,14 +123,7 @@
 				</div>
 			</div>
 		</div>
-
-
-
-
-
-
-
-
+		@include('components/backToTopBtn')
 	</div>
 
 
