@@ -48,13 +48,14 @@ body {
 .navbar-menu {
   padding: 8px 12px;
   color: white;
-  border-radius: 0px;
+  border-radius: 2px;
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 /* Animasi saat di-hover */
 .navbar-menu:hover {
   background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
   transform: translateY(-3px);
   
 }
@@ -62,6 +63,55 @@ body {
 /* Mengatur efek hanya pada elemen yang di-hover */
 .navbar-menu:not(:hover) {
   transform: translateY(0);
+}
+
+.nav-link {
+  padding: 8px 12px;
+  color: white;
+  border-radius: 2px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-link.active {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+}
+#backToTopBtn {
+  transition: opacity 0.3s ease;
+}
+#backToTopBtn.show {
+  display: block;
+  opacity: 1;
+}
+#backToTopBtn.hidden {
+  opacity: 0;
+}
+@media (max-width: 768px) {
+  #search-form input {
+    font-size: 0.875rem;
+    /* Ukuran font lebih kecil */
+  }
+
+  .logo {
+    /* Atur ukuran logo pada mode mobile */
+    font-size: 1rem;
+    /* Mengurangi ukuran logo */
+  }
+}
+
+/* Pastikan body dan html memiliki tinggi layar penuh tanpa overflow */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  /* overflow: hidden; */
+}
+
+#search-form input::placeholder {
+  color: white;
+  /* Gunakan !important hanya jika diperlukan */
+  opacity: 1;
+  /* Menjaga opacity agar placeholder terlihat */
 }
 
 
