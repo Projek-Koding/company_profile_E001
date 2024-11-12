@@ -12,7 +12,7 @@
         <div class="flex flex-row">
             <ul class="hidden gap-2 rounded-sm text-white md:flex md:items-end">
                 <li class="duration-300 hover:scale-105"><a href="{{ route('beranda') }}"
-                        class="navbar-menu  nav-link {{ Route::is('beranda')  ? 'active' : '' }}">Beranda</a></li>
+                        class="navbar-menu  nav-link {{ Route::is('beranda') ? 'active' : '' }}">Beranda</a></li>
                 <li class="duration-300 hover:scale-105"><a href="{{ route('profil') }}"
                         class="navbar-menu rounded-sm nav-link {{ Route::is('profil') ? 'active' : '' }}">Profil</a>
                 </li>
@@ -20,14 +20,14 @@
                         class="navbar-menu rounded-sm nav-link {{ Route::is('berita') ? 'active' : '' }}">Berita</a>
                 </li>
                 <li class="duration-300 hover:scale-105"><a href="{{ route('pengumuman') }}"
-                        class="navbar-menu rounded-sm nav-link {{ Route::is('pengumuman') || Route::is('pengumuman-detail')? 'active' : '' }}">Pengumuman</a>
+                        class="navbar-menu rounded-sm nav-link {{ Route::is('pengumuman') || Route::is('pengumuman-detail') ? 'active' : '' }}">Pengumuman</a>
                 </li>
                 <li class="duration-300 hover:scale-105"><a href="{{ route('madrasah') }}"
                         class="navbar-menu rounded-sm nav-link {{ Route::is('madrasah') ? 'active' : '' }}">Madrasah</a>
                 </li>
-                <li class="duration-300 hover:scale-105"><a href="{{ route('tentang') }}"
+                {{-- <li class="duration-300 hover:scale-105"><a href="{{ route('tentang') }}"
                         class="navbar-menu rounded-sm nav-link {{ Route::is('tentang') ? 'active' : '' }}">Tentang
-                        Kami</a></li>
+                        Kami</a></li> --}}
 
             </ul>
         </div>
@@ -62,7 +62,7 @@
             <li><a href="/berita" class="hover:text-blue-200 md:text-base">Berita</a></li>
             <li><a href="/pengumuman" class="hover:text-blue-200 md:text-base">Pengumuman</a></li>
             <li><a href="/madrasah" class="hover:text-blue-200 md:text-base">Madrasah</a></li>
-            <li><a href="/tentang" class="hover:text-blue-200 md:text-base">Tentang Kami</a></li>
+            {{-- <li><a href="/tentang" class="hover:text-blue-200 md:text-base">Tentang Kami</a></li> --}}
         </ul>
     </div>
 </nav>
