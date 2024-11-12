@@ -1,4 +1,5 @@
 @extends('layouts.main')
+@section('title', 'beranda')
 
 @section('content')
 	<!-- Hero Section -->
@@ -8,7 +9,8 @@
 		class="mx-auto flex min-h-screen w-full flex-wrap justify-center overflow-auto bg-primary text-center max-xl:hidden max-md:px-7 md:text-left">
 		<!-- Bagian Kiri: Ucapan Selamat Datang -->
 		<div class="mb-6 flex w-full flex-col justify-center pl-40 md:mb-0 md:w-1/2">
-			<h1 class="mb-4 text-3xl font-bold text-white max-md:text-3xl">Selamat Datang di Laman Pimpinan Daerah Muhammadiyah
+			<h1 class="mb-4 text-3xl font-bold text-white max-md:text-3xl">Selamat Datang di Laman Pimpinan Daerah
+				Muhammadiyah
 				Kab. Pinrang</h1>
 			<p class="text-md mb-6 text-white max-md:text-sm">
 				Kami hadir untuk memberikan informasi terbaru dan kegiatan Muhammadiyah di Kab. Pinrang.
@@ -78,12 +80,13 @@
 	</div>
 	<!-- Section Profil - Sekilas Tentang Kami -->
 	<div class="w-full bg-primary py-16 text-white">
-		<div class="container mx-auto px-6">
+		<div class="container w-10/12  mx-auto px-6">
 			<!-- Judul Section -->
 			<div class="mb-12 text-center">
 				<h2 class="mb-4 text-4xl font-extrabold uppercase tracking-wider">Sekilas Tentang Kami</h2>
 				<p class="mx-auto max-w-3xl text-lg text-gray-100">
-					Muhammadiyah di Kabupaten Pinrang hadir sebagai pelopor dalam berbagai kegiatan sosial, pendidikan, dan keagamaan,
+					Muhammadiyah di Kabupaten Pinrang hadir sebagai pelopor dalam berbagai kegiatan sosial, pendidikan, dan
+					keagamaan,
 					dengan semangat membangun peradaban yang lebih baik.
 				</p>
 			</div>
@@ -93,10 +96,12 @@
 				<!-- Card Profil 1 -->
 				<div
 					class="group relative transform rounded-sm border-l-4 border-white bg-blue-700 p-8 shadow-lg transition-all duration-300 hover:scale-105 hover:border-yellow-400 hover:shadow-2xl">
-					<h3 class="mb-4 text-2xl font-semibold transition-colors duration-300 group-hover:text-yellow-400">Sejarah Singkat
+					<h3 class="mb-4 text-2xl font-semibold transition-colors duration-300 group-hover:text-yellow-400">
+						Sejarah Singkat
 					</h3>
 					<p class="text-gray-100 duration-300 group-hover:text-white">
-						Sejak awal abad ke-20, Muhammadiyah di Kabupaten Pinrang telah mengambil peran aktif dalam mengembangkan pendidikan
+						Sejak awal abad ke-20, Muhammadiyah di Kabupaten Pinrang telah mengambil peran aktif dalam
+						mengembangkan pendidikan
 						dan kegiatan sosial di tengah masyarakat.
 					</p>
 
@@ -105,10 +110,12 @@
 				<!-- Card Profil 2 -->
 				<div
 					class="group relative transform rounded-sm border-l-4 border-white bg-blue-700 p-8 shadow-lg transition-all duration-300 hover:scale-105 hover:border-yellow-400 hover:shadow-2xl">
-					<h3 class="mb-4 text-2xl font-semibold transition-colors duration-300 group-hover:text-yellow-400">Visi dan Misi
+					<h3 class="mb-4 text-2xl font-semibold transition-colors duration-300 group-hover:text-yellow-400">Visi
+						dan Misi
 					</h3>
 					<p class="text-gray-100 duration-300 group-hover:text-white">
-						Membangun masyarakat yang unggul dalam pendidikan, berakhlak mulia, dan berperan aktif dalam meningkatkan kualitas
+						Membangun masyarakat yang unggul dalam pendidikan, berakhlak mulia, dan berperan aktif dalam
+						meningkatkan kualitas
 						hidup umat di Kabupaten Pinrang.
 					</p>
 
@@ -117,10 +124,12 @@
 				<!-- Card Profil 3 -->
 				<div
 					class="group relative transform rounded-sm border-l-4 border-white bg-blue-700 p-8 shadow-lg transition-all duration-300 hover:scale-105 hover:border-yellow-400 hover:shadow-2xl">
-					<h3 class="mb-4 text-2xl font-semibold transition-colors duration-300 group-hover:text-yellow-400">Kontribusi Kami
+					<h3 class="mb-4 text-2xl font-semibold transition-colors duration-300 group-hover:text-yellow-400">
+						Kontribusi Kami
 					</h3>
 					<p class="text-gray-100 duration-300 group-hover:text-white">
-						Kami telah mendirikan sekolah, klinik kesehatan, dan berbagai kegiatan dakwah yang memberikan dampak positif bagi
+						Kami telah mendirikan sekolah, klinik kesehatan, dan berbagai kegiatan dakwah yang memberikan dampak
+						positif bagi
 						masyarakat di Kabupaten Pinrang.
 					</p>
 
@@ -174,13 +183,14 @@
 
 
 	<!-- Section Berita -->
-	<div class="mt-2 min-h-screen w-full bg-white py-16 text-primary">
+	<div class="mt-2 min-h-screen w-10/12 mx-auto bg-white py-16 text-primary">
 		<div class="container mx-auto px-6">
 			<!-- Judul Section Berita -->
 			<div class="mb-12 text-center">
 				<h2 class="mb-4 text-4xl font-extrabold uppercase">Berita Terbaru</h2>
 				<p class="mx-auto max-w-2xl text-lg text-primary">
-					Temukan informasi terkini mengenai kegiatan dan perkembangan terbaru dari Muhammadiyah Kabupaten Pinrang.
+					Temukan informasi terkini mengenai kegiatan dan perkembangan terbaru dari Muhammadiyah Kabupaten
+					Pinrang.
 				</p>
 			</div>
 
@@ -220,5 +230,5 @@
 		</div>
 	</div>
 	@include('components/backToTopBtn')
-  
+	{{-- @include('features/hubungiKami') --}}
 @endsection

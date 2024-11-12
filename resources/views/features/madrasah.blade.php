@@ -45,7 +45,7 @@
             @foreach ($majelisList as $majelis)
                 <div class="group overflow-hidden rounded-xl bg-white shadow-lg transition-transform duration-300 hover:scale-105">
                     <div class="p-5">
-                        <h2 class="mb-2 text-xl font-semibold text-primary group-hover:text-yellow-500 hover:un"><a href="#">{{ $majelis['nama'] }}</a></h2>
+                        <h2 class="mb-2 text-xl font-semibold text-primary group-hover:text-yellow-500 hover:underline"><a href="#">{{ $majelis['nama'] }}</a></h2>
                         <p class="text-gray-600">{{ $majelis['deskripsi'] }}</p>
                     </div>
                 </div>

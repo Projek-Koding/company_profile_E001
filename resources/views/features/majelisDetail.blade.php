@@ -18,7 +18,7 @@
 
 	@foreach ($majelisList as $majelis)
 		<div class="justify-center">
-			<div class="mx-auto w-full mb-     max-w-4xl items-center gap-5 px-5 pt-40 sm:px-6 lg:px-8">
+			<div class="mx-auto w-full mb-10     max-w-4xl items-center gap-5 px-5 pt-40 sm:px-6 lg:px-8">
 				<nav class="mb-4 text-sm text-gray-600">
 					<a href="{{ url('/') }}" class="hover:text-blue-500">Beranda</a>
 					<span class="mx-2">/</span>

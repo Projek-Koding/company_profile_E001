@@ -11,6 +11,7 @@ class StatsOverview extends BaseWidget
     protected function getStats(): array
     {
         $berita = Berita::count();
+        // $berita = Berita::count();
         
         return [
             Stat::make('Jumlah Berita', $berita),
