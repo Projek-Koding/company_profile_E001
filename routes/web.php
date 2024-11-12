@@ -23,7 +23,7 @@ Route::get('/berita', function () {
 
 Route::get('/berita/detail/{id}', function ($id) {
     $berita = Berita::where('id', $id)->first();
-    return redirect('/berita/' . $berita->slug);
+    return view('features/detailBerita');
 })->name('berita-detail');
 
 Route::get('/pengumuman', function () {
