@@ -1,5 +1,5 @@
 @extends('layouts.main')
-@section('title', 'About Us')
+@section('title', 'S&K Web')
 
 @section('content')
     @include('components.navbar')
@@ -9,20 +9,10 @@
         <div class="px-5 py-44 gap-5 w-full items-center max-w-5xl mx-auto sm:px-6 lg:py-44 lg:px-8">
 
             {{-- about us --}}
-            <div class="self-stretch text-[#064dac] text-2xl font-bold pb-3">Tentang Kami</div>
+            <div class="self-stretch text-[#064dac] text-2xl font-bold pb-3">Syarat dan Ketentuan</div>
 
             {{-- Sejarah Organisasi --}}
             <div class="flex-col gap-4  flex items-center">
-                <div class="self-stretch p-5 bg-white rounded-lg drop-shadow flex-col justify-start items-start gap-3 flex">
-                    <div class="self-stretch text-[#414141] text-lg font-bold  leading-7">Sejarah
-                        Terbentuknya Pimpinan Daerah Muhammadiyah Kab. Pinrang</div>
-                    <div class="self-stretch h-[0px] border border-[#e1e1e1]"></div>
-                    <div class="self-stretch text-[#353535] text-sm font-normal  ">
-                        Muhammadiyah di Kab. Pinrang terbentuk pada 18 November 1928 dengan ketua pertama Muhammadiyah
-                        di
-                        Kab. Pinrang yaitu H. Abdul Fattah
-                    </div>
-                </div>
 
                 {{-- Hal-hal yang disediakan website ini: --}}
                 <div class="self-stretch p-5 bg-white rounded-lg drop-shadow flex-col justify-start items-start gap-3 flex">
@@ -260,6 +250,6 @@
         </div>
 
     </div>
-    @include('components.footer')
+
 
 @endsection
