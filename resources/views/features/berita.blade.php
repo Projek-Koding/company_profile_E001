@@ -22,7 +22,7 @@
                                 <p class="mb-1 w-max  text-gray-500 text-xs font-medium">{{ $berita->created_at }}</p>
                                 <h3
                                     class=" text-lg hover:underline font-medium transition-colors duration-300 group-hover:text-yellow-400 line-clamp-2">
-                                    <a href="{{ url('/berita/detail/' . $berita['id']) }}">{{ $berita->judul }}</a>
+                                    <a href="{{ url('/berita/' . $berita->slug) }}">{{ $berita->judul }}</a>
 
                                 </h3>
                                 {{-- <p class="text-gray-700 mb-5 duration-300 text-xs group-hover:text-gray-800">

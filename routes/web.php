@@ -21,9 +21,10 @@ Route::get('/berita', function () {
     return view('features/berita', compact('beritaList'));
 })->name('berita');
 
-Route::get('/berita/detail/{id}', function ($id) {
-    $berita = Berita::where('id', $id)->first();
-    return view('features/detailBerita');
+Route::get('/berita/{slug}', function ($slug) {
+    $berita = Berita::where('slug', $slug)->first();
+    $beritaLainnya = Berita::inRandomOrder()->take(5)->get();
+    return view('features/detailBerita', compact('berita','beritaLainnya'));
 })->name('berita-detail');
 
 Route::get('/pengumuman', function () {
@@ -38,6 +39,10 @@ Route::get('/madrasah', function () {
     // $pengumuman = Pengumuman::find($id);
     return view('features/madrasah');
 })->name(name: 'madrasah');
+Route::get('/syarat-dan-ketentuan', function () {
+    // $pengumuman = Pengumuman::find($id);
+    return view('features/snk');
+})->name(name: 'syarat-dan-ketentuan');
 
 // Route::get('/about-us', function () {
 //     return view('features/aboutUs');
@@ -54,6 +59,6 @@ Route::get('/madrasah', function () {
 //     return view('components/navbar');
 // });
 
-Route::get('/syarat-dan-ketentuan', function () {
-    return view('features/snk');
-})->name('syarat-dan-ketentuan');
+Route::get('/tentang', function () {
+    return view('features/tentang');
+})->name('tentang');

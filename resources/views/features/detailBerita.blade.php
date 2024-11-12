@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
-@php
+    {{-- @php
      $berita = [
         'id' => 1,
         'judul' => 'Contoh Judul Berita',
@@ -37,58 +37,61 @@
         
     ];
 
-@endphp
+@endphp --}}
 
 
-<div class="min-h-screen pt-40 max-lg:pt-44 mx-auto px-4 py-8">
-    <div class="mx-auto w-10/12 pl-5 max-lg:pl-0 flex flex-col lg:flex-row gap-8">
-        
-        <!-- Kolom Kiri - Detail Berita -->
-        <div class="w-full  lg:w-8/12 ">
-            <nav class="mb-4 text-sm">
-                <a href="{{ url('/') }}" class="text-primary hover:underline">Beranda</a>
-                <span class="mx-2">/</span>
-                <a href="{{ url('/berita') }}" class="text-primary hover:underline">Berita</a>
-                <span class="mx-2">/</span>
-                <span class="text-gray-700">Detail Berita</span>
-            </nav>
-            <!-- Judul Berita -->
-            <h1 class="mb-4 text-3xl font-bold">{{ $berita['judul'] }}</h1>
+    <div class="min-h-screen pt-40 max-lg:pt-44 mx-auto px-4 py-8">
+        <div class="mx-auto w-10/12 pl-5 max-lg:pl-0 flex flex-col lg:flex-row gap-8">
 
-            <!-- Terakhir Diperbarui -->
-            <p class="mb-4 text-gray-500 text-sm">Terakhir diperbarui: {{ $berita['tanggal_diperbarui'] }}, oleh: {{ $berita['penulis'] }}.</p>
-            
 
-            <!-- Gambar Berita -->
-            <img src="{{ $berita['gambar'] }}" alt="{{ $berita['judul'] }}" class="mb-6 w-full rounded-lg object-cover shadow-md">
+            <!-- Kolom Kiri - Detail Berita -->
+            <div class="w-full  lg:w-8/12 ">
+                <nav class="mb-4 text-sm">
+                    <a href="{{ url('/') }}" class="text-primary hover:underline">Beranda</a>
+                    <span class="mx-2">/</span>
+                    <a href="{{ url('/berita') }}" class="text-primary hover:underline">Berita</a>
+                    <span class="mx-2">/</span>
+                    <span class="text-gray-700">Detail Berita</span>
+                </nav>
+                <!-- Judul Berita -->
+                <h1 class="mb-4 text-3xl font-bold">{{ $berita->judul }}</h1>
 
-            <!-- Deskripsi Berita -->
-            <div class="mb-8 text-justify text-gray-700">
-                <p>{{ $berita['deskripsi'] }}</p>
+                <!-- Terakhir Diperbarui -->
+                <p class="mb-4 text-gray-500 text-sm">Terakhir diperbarui: {{ $berita->updated_at }}, oleh:
+                    {{ $berita->penulis }}.</p>
+
+
+                <!-- Gambar Berita -->
+                <img src="{{ asset('/storage/' . $berita->gambar) }}" alt="{{ $berita->judul }}"
+                    class="mb-6 w-full rounded-lg object-cover shadow-md">
+
+                <!-- Deskripsi Berita -->
+                <div class="mb-8 text-justify text-gray-700">
+                    <p>{!! str($berita->isi_berita)->sanitizeHtml() !!}</p>
+                </div>
             </div>
-        </div>
 
-        <!-- Kolom Kanan - Berita Lainnya -->
-        <div class="w-full lg:w-4/12 lg:pt-12">
-            <h2 class="mb-4 text-2xl font-semibold">Berita Lainnya</h2>
-            <div class="grid gap-6">
-                @foreach ($beritaLainnya as $berita)
-                    <div
-                        class="group relative transform rounded-xl bg-white text-primary shadow-md transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-                        <img src="{{ $berita['gambar'] }}" alt="{{ $berita['judul'] }}" class="h-48 w-full rounded-t-xl object-cover">
-                        <div class="p-5">
-                            <p class="mb-1 w-max text-xs font-medium text-gray-500">{{ $berita['tanggal'] }}</p>
+            <!-- Kolom Kanan - Berita Lainnya -->
+            <div class="w-full lg:w-4/12 lg:pt-12">
+                <h2 class="mb-4 text-2xl font-semibold">Berita Lainnya</h2>
+                <div class="grid gap-6">
+                    @foreach ($beritaLainnya as $berita)
+                        <div
+                            class="group relative transform rounded-xl bg-white text-primary shadow-md transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                            <img src="{{ asset('/storage/' . $berita->gambar) }}" alt="{{ $berita->judul }}"
+                                class="h-48 w-full rounded-t-xl object-cover">
+                            <div class="p-5">
+                                <p class="mb-1 w-max text-xs font-medium text-gray-500">{{ $berita->created_at }}</p>
 
-                            <h3
-                                class="line-clamp-2 text-lg font-medium transition-colors duration-300 hover:underline group-hover:text-yellow-400">
-                                <a href="{{ url('/berita/detail/' . $berita['id']) }}">{{ $berita['judul'] }}</a>
-                            </h3>
+                                <h3
+                                    class="line-clamp-2 text-lg font-medium transition-colors duration-300 hover:underline group-hover:text-yellow-400">
+                                    <a href="{{ url('/berita/' . $berita->slug) }}">{{ $berita->judul }}</a>
+                                </h3>
+                            </div>
                         </div>
-                    </div>
-                @endforeach
+                    @endforeach
+                </div>
             </div>
         </div>
     </div>
-</div>
-
 @endsection

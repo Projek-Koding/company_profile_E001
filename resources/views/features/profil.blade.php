@@ -12,7 +12,21 @@
             <p class="text-primary">Untuk mengenal Pimpnan Daerah Muhammadiah Pinrang Lebih Dalam</p>
         </div>
 
-
+        {{-- about us --}}
+        <div class="px-5 py-32 gap-5 w-full items-center max-w-5xl mx-auto sm:px-6 lg:py-32 lg:px-8">
+            {{-- <div class="text-center text-[#064dac] text-2xl font-bold pb-3">Tentang Kami</div> --}}
+            <div
+                class="self-stretch p-5 border border-gray-300 bg-white rounded-lg drop-shadow flex-col justify-start items-start gap-3 flex text-center">
+                <div class="self-stretch text-primary text-lg font-bold  leading-7">Sejarah
+                    Terbentuknya Pimpinan Daerah Muhammadiyah Kab. Pinrang</div>
+                <div class="self-stretch h-[0px] border border-[#e1e1e1]"></div>
+                <div class="self-stretch text-[#353535] text-sm font-normal  ">
+                    Muhammadiyah di Kab. Pinrang terbentuk pada 18 November 1928 dengan ketua pertama Muhammadiyah
+                    di
+                    Kab. Pinrang yaitu <br> H. Abdul Fattah
+                </div>
+            </div>
+        </div>
         <!-- Konten Visi dan Misi -->
         <div
             class="container mx-auto mb-0 mt-0 gap-10 text-center max-lg:w-10/12 max-lg:px-4 max-lg:py-8 max-md:gap-y-10 lg:w-11/12">
@@ -73,7 +87,7 @@
 
         <!-- Konten Struktur Organisasi -->
         <div
-            class="container mx-auto flex min-h-screen flex-col items-center justify-center py-3 max-md:w-10/12 lg:w-11/12">
+            class="container mx-auto flex min-h-screen flex-col items-center justify-center my-10 py-3 max-md:w-10/12 lg:w-11/12">
             <h2 class="mb-10 text-center text-5xl font-bold text-primary max-md:text-3xl">Struktur Organisasi</h2>
 
             <!-- Kontainer CEO (Gambar di kiri, Sambutan di kanan) -->
@@ -95,7 +109,7 @@
 
             <!-- Kontainer Anggota Tim -->
             <div
-                class="container mx-auto mt-10 flex flex-wrap justify-center gap-8 max-md:mx-3 max-md:grid max-md:grid-cols-2 max-md:grid-rows-2 max-md:gap-2">
+                class="container mx-auto  flex flex-wrap justify-center gap-8 max-md:mx-3 max-md:grid max-md:grid-cols-2 max-md:grid-rows-2 max-md:gap-2">
                 <!-- Anggota Tim 1 -->
                 <div class="flex w-64 rounded-sm flex-col items-center bg-primary p-6 max-md:w-fit">
                     <img src="{{ asset('img/ketua PDM.jpg') }}" alt="Ketua PDM"
@@ -135,21 +149,7 @@
 
             </div>
 
-            {{-- about us --}}
-            <div class="px-5 py-32 gap-5 w-full items-center max-w-5xl mx-auto sm:px-6 lg:py-32 lg:px-8">
-                <div class="text-center text-[#064dac] text-2xl font-bold pb-3">Tentang Kami</div>
-                <div
-                    class="self-stretch p-5 bg-white rounded-lg drop-shadow flex-col justify-start items-start gap-3 flex text-center">
-                    <div class="self-stretch text-[#414141] text-lg font-bold  leading-7">Sejarah
-                        Terbentuknya Pimpinan Daerah Muhammadiyah Kab. Pinrang</div>
-                    <div class="self-stretch h-[0px] border border-[#e1e1e1]"></div>
-                    <div class="self-stretch text-[#353535] text-sm font-normal  ">
-                        Muhammadiyah di Kab. Pinrang terbentuk pada 18 November 1928 dengan ketua pertama Muhammadiyah
-                        di
-                        Kab. Pinrang yaitu <br> H. Abdul Fattah
-                    </div>
-                </div>
-            </div>
+
         </div>
         @include('components/backToTopBtn')
     </div>

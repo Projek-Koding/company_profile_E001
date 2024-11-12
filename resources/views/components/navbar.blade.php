@@ -1,7 +1,7 @@
-<nav class="z-20 w-full bg-primary py-5 text-white shadow fixed">
+<nav class="z-20 w-full bg-primary py-2 text-white shadow fixed">
     <div class="mx-auto flex items-center justify-between max-md:px-7 lg:w-11/12">
         <div class="flex items-center space-x-4">
-            <a href="#"><img src="{{ asset('img/muhammadiyah-putih.png') }}"alt="Deskripsi Gambar"
+            <a href="/"><img src="{{ asset('img/muhammadiyah-putih.png') }}"alt="Deskripsi Gambar"
                     class="h-20 w-full object-contain max-md:h-28"></a>
             <h1 class="text-start text-xl font-bold max-md:text-lg">
                 Pimpinan Daerah Muhammadiyah <br>
