@@ -54,6 +54,6 @@ Route::get('/madrasah', function () {
 //     return view('components/navbar');
 // });
 
-Route::get('/tentang', function () {
-    return view('features/tentang');
-})->name('tentang');
+Route::get('/syarat-dan-ketentuan', function () {
+    return view('features/snk');
+})->name('syarat-dan-ketentuan');
