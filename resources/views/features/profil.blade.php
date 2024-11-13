@@ -1,5 +1,5 @@
 @extends('layouts.main')
-@section('title', 'Profile')
+@section('title', 'Profil')
 
 @section('content')
 
@@ -88,22 +88,6 @@
             class="container mx-auto flex min-h-screen flex-col items-center justify-center my-10 py-3 max-md:w-10/12 lg:w-11/12">
             <h2 class="mb-10 text-center text-5xl font-bold text-primary max-md:text-3xl">Struktur Organisasi</h2>
 
-            <!-- Kontainer CEO (Gambar di kiri, Sambutan di kanan) -->
-            {{-- <div class="mb-8 flex w-10/12 flex-col items-center p-8 md:flex-row md:items-start md:text-left">
-				<!-- Gambar CEO -->
-				<img src="{{ asset('img/ketua PDM.jpg') }}" alt="CEO"
-					class="mb-4 h-60 w-60 rounded-full object-cover shadow-md duration-300 hover:scale-105 max-md:h-60 max-md:w-60 md:mb-0 md:mr-8">
-
-				<!-- Sambutan dan Info CEO -->
-				<div class="my-auto ml-3 flex flex-col items-center text-center duration-300 hover:scale-105 md:items-start">
-					<p class="mb-4 text-center text-primary max-md:text-sm md:text-left">
-						"Selamat datang di struktur organisasi kami. Dengan komitmen tinggi, kami siap membawa perusahaan ini menuju
-						kesuksesan bersama. Mari kita mencapai visi dan misi yang telah kita tentukan."
-					</p>
-					<h3 class="text-2xl font-bold text-primary max-md:text-lg">Andi Syamiluddin, S.Pd.,M.Pd. I</h3>
-					<p class="text-primary">Ketua Pimpinan Daerah Muhammadiyah</p>
-				</div>
-			</div> --}}
 
             <!-- Kontainer Anggota Tim -->
             <div
@@ -130,8 +114,8 @@
                 <div class="flex w-64 rounded-sm  flex-col items-center bg-primary p-6 max-md:w-fit">
                     <img src="{{ asset('img/Kepala Disdakmen.jpg') }}" alt="Nama Anggota 3"
                         class="mb-4 h-28 w-28 rounded-full object-cover">
-                    <h3 class="max-md:text-md text-md text-center font-semibold text-white">Nandi Matjtja Moenta, S.Sos</h3>
-                    <p class="text-center text-xs text-white max-md:text-sm">Kepala Dinas Pendidikan Dasar dan Menengah Kab.
+                    <h3 class="max-md:text-md text-md text-center font-semibold text-white">Muh. Abrar Usman, S. Pd.M.Pd</h3>
+                    <p class="text-center text-xs text-white max-md:text-sm">Ketua Majelis Pendidikan Dasar Menengah Kab.
                         Pinrang</p>
                 </div>
 
@@ -139,8 +123,8 @@
                 <div class="flex w-64 flex-col rounded-sm  items-center bg-primary p-6 max-md:w-fit">
                     <img src="{{ asset('img/Sekretaris Disdakmen.jpg') }}" alt="Nama Anggota 4"
                         class="mb-4 h-28 w-28 rounded-full object-cover">
-                    <h3 class="max-md:text-md text-md text-center font-semibold text-white">Nama Anggota 1</h3>
-                    <p class="text-center text-xs text-white max-md:text-sm">Sekretaris Dinas Pendidikan Dasar dan Menengah
+                    <h3 class="max-md:text-md text-md text-center font-semibold text-white">Masnur, S. Pd. M. Pd</h3>
+                    <p class="text-center text-xs text-white max-md:text-sm">Sekretaris Majelis Pendidikan Dasar Menengah
                         Kab. Pinrang
                     </p>
                 </div>

@@ -31,10 +31,10 @@ Route::get('/pengumuman/detail/{id}', function ($id) {
     $pengumuman = Pengumuman::find($id);
     return view('features/pengumumanDetail', compact('pengumuman'));
 })->name('pengumuman-detail');
-Route::get('/madrasah', function () {
+Route::get('/majelis', function () {
     // $pengumuman = Pengumuman::find($id);
-    return view('features/madrasah');
-})->name(name: 'madrasah');
+    return view('features/majelis');
+})->name(name: 'majelis');
 Route::get('/syarat-dan-ketentuan', function () {
     // $pengumuman = Pengumuman::find($id);
     return view('features/snk');

@@ -1,5 +1,5 @@
 @extends('layouts.main')
-@section('title', 'S&K Web')
+@section('title', 'S&K')
 
 @section('content')
     @include('components.navbar')
