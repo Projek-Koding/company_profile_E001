@@ -20,28 +20,28 @@
 				Lebih Lanjut</a>
 		</div>
 
-		<!-- Bagian Kanan: Gambar Kantor dengan Gradien Overlay -->
-		<div class="relative flex h-80 w-full items-center justify-center md:h-full md:w-1/2">
-			<div class="relative h-full w-full overflow-hidden rounded-lg">
-				<img src="{{ asset('img/kantor PDM.jpg') }}" alt="Gambar Kantor Muhammadiyah"
-					class="h-full w-full object-cover shadow-lg">
+        <!-- Bagian Kanan: Gambar Kantor dengan Gradien Overlay -->
+        <div class="relative flex h-80 w-full items-center justify-center md:h-full md:w-1/2">
+            <div class="relative h-full w-full overflow-hidden rounded-lg">
+                <img src="{{ asset('img/kantor PDM.jpg') }}" alt="Gambar Kantor Muhammadiyah"
+                    class="h-full w-full object-cover shadow-lg">
 
-				<!-- Layer Gradien Memudar dari Primary ke Transparan -->
-				<div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/20 to-transparent"></div>
+                <!-- Layer Gradien Memudar dari Primary ke Transparan -->
+                <div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/20 to-transparent"></div>
 
-				<!-- Layer Kabut Gelap untuk gambar -->
-				<div class="absolute inset-0 rounded-lg bg-primary bg-opacity-60"></div>
-			</div>
-		</div>
-	</div>
-	<!-- Tampilan Mobile -->
-	<div class="relative flex h-screen w-full flex-col items-center justify-center bg-cover bg-center xl:hidden"
-		style="background-image: url('{{ asset('img/kantor PDM.jpg') }}');">
-		<!-- Layer Kabut Gelap untuk gambar -->
-		<div class="absolute inset-0 rounded-lg bg-primary bg-opacity-60"></div>
+                <!-- Layer Kabut Gelap untuk gambar -->
+                <div class="absolute inset-0 rounded-lg bg-primary bg-opacity-60"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Tampilan Mobile -->
+    <div class="relative flex h-screen w-full flex-col items-center justify-center bg-cover bg-center xl:hidden"
+        style="background-image: url('{{ asset('img/kantor PDM.jpg') }}');">
+        <!-- Layer Kabut Gelap untuk gambar -->
+        <div class="absolute inset-0 rounded-lg bg-primary bg-opacity-60"></div>
 
-		<!-- Layer Gelap untuk Membuat Teks Lebih Terlihat -->
-		<div class="absolute inset-0 bg-black/50"></div>
+        <!-- Layer Gelap untuk Membuat Teks Lebih Terlihat -->
+        <div class="absolute inset-0 bg-black/50"></div>
 
 		<!-- Konten Teks -->
 		<div class="relative z-10 px-5 text-center">
@@ -59,7 +59,7 @@
 	</div>
 
 
-	</div>
+    </div>
 
 	<!-- Section Tentang Kami -->
 	<div class="flex min-h-screen w-full flex-wrap items-center justify-center bg-white py-8 max-sm:flex-col">
@@ -105,7 +105,7 @@
 						dan kegiatan sosial di tengah masyarakat.
 					</p>
 
-				</div>
+                </div>
 
 				<!-- Card Profil 2 -->
 				<div
@@ -119,7 +119,7 @@
 						hidup umat di Kabupaten Pinrang.
 					</p>
 
-				</div>
+                </div>
 
 				<!-- Card Profil 3 -->
 				<div
@@ -133,53 +133,55 @@
 						masyarakat di Kabupaten Pinrang.
 					</p>
 
-				</div>
-			</div>
+                </div>
+            </div>
 
-			<!-- Tombol Lebih Lanjut dengan Animasi -->
-			<div class="mt-12 flex justify-center">
-				<a href="#"
-					class="mx-auto w-fit rounded-sm bg-white px-6 py-2 font-semibold text-primary duration-300 hover:scale-105 hover:bg-gray-300 md:mx-0">
-					Pelajari Lebih Lanjut
-				</a>
-			</div>
-		</div>
-	</div>
-	@php
-		// Data berita sebagai simulasi
-		$beritaList = [
-		    [
-		        'id' => 1,
-		        'judul' =>
-		            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni expedita voluptas ea non odio quasi praesentium error quidem dolorem! Commodi quibusdam molestiae consectetur amet ut veniam mollitia velit iste odit.',
-		        'tanggal' => '5 November 2024',
-		        'deskripsi' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. ',
-		        'gambar' =>
-		            'https://awsimages.detik.net.id/community/media/visual/2022/07/13/ilustrasi-baca-berita_169.jpeg?w=1200',
-		    ],
-		    [
-		        'id' => 2,
-		        'judul' => 'Judul Berita 2',
-		        'tanggal' => '5 November 2024',
-		        'deskripsi' => 'Deskripsi singkat berita 2...',
-		        'gambar' => 'https://bbpmpsulsel.kemdikbud.go.id/assets/images/3afdf8eed4c601ca8ac8e4445194cf36.jpeg',
-		    ],
-		    [
-		        'id' => 3,
-		        'judul' => 'Judul Berita 3',
-		        'tanggal' => '5 November 2024',
-		        'deskripsi' => 'Deskripsi singkat berita 3...',
-		        'gambar' => 'https://asset-2.tstatic.net/makassar/foto/bank/images/Kuasa-hukum-Raymond-Kamil-1-7112024.jpg',
-		    ],
-		    [
-		        'id' => 4,
-		        'judul' => 'Judul Berita 4',
-		        'tanggal' => '5 November 2024',
-		        'deskripsi' => 'Deskripsi singkat berita 3...',
-		        'gambar' => 'https://asset-2.tstatic.net/makassar/foto/bank/images/Kuasa-hukum-Raymond-Kamil-1-7112024.jpg',
-		    ],
-		];
-	@endphp
+            <!-- Tombol Lebih Lanjut dengan Animasi -->
+            <div class="mt-12 flex justify-center">
+                <a href="#"
+                    class="mx-auto w-fit rounded-sm bg-white px-6 py-2 font-semibold text-primary duration-300 hover:scale-105 hover:bg-gray-300 md:mx-0">
+                    Pelajari Lebih Lanjut
+                </a>
+            </div>
+        </div>
+    </div>
+    @php
+        // Data berita sebagai simulasi
+        $beritaList = [
+            [
+                'id' => 1,
+                'judul' =>
+                    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni expedita voluptas ea non odio quasi praesentium error quidem dolorem! Commodi quibusdam molestiae consectetur amet ut veniam mollitia velit iste odit.',
+                'tanggal' => '5 November 2024',
+                'deskripsi' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. ',
+                'gambar' =>
+                    'https://awsimages.detik.net.id/community/media/visual/2022/07/13/ilustrasi-baca-berita_169.jpeg?w=1200',
+            ],
+            [
+                'id' => 2,
+                'judul' => 'Judul Berita 2',
+                'tanggal' => '5 November 2024',
+                'deskripsi' => 'Deskripsi singkat berita 2...',
+                'gambar' => 'https://bbpmpsulsel.kemdikbud.go.id/assets/images/3afdf8eed4c601ca8ac8e4445194cf36.jpeg',
+            ],
+            [
+                'id' => 3,
+                'judul' => 'Judul Berita 3',
+                'tanggal' => '5 November 2024',
+                'deskripsi' => 'Deskripsi singkat berita 3...',
+                'gambar' =>
+                    'https://asset-2.tstatic.net/makassar/foto/bank/images/Kuasa-hukum-Raymond-Kamil-1-7112024.jpg',
+            ],
+            [
+                'id' => 4,
+                'judul' => 'Judul Berita 4',
+                'tanggal' => '5 November 2024',
+                'deskripsi' => 'Deskripsi singkat berita 3...',
+                'gambar' =>
+                    'https://asset-2.tstatic.net/makassar/foto/bank/images/Kuasa-hukum-Raymond-Kamil-1-7112024.jpg',
+            ],
+        ];
+    @endphp
 
 
 	<!-- Section Berita -->
@@ -194,31 +196,32 @@
 				</p>
 			</div>
 
-			<!-- Konten Berita dalam Grid -->
-			<div class="grid grid-cols-1 gap-8 md:grid-cols-4">
-				<!-- Berita 1 -->
-				{{-- Menggunakan foreach untuk loop card berita --}}
-				@foreach ($beritaList as $berita)
-					<div
-						class="group relative transform rounded-xl bg-white text-primary shadow-md transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-						<img src="{{ $berita['gambar'] }}" alt="{{ $berita['judul'] }}" class="h-48 w-full rounded-t-xl object-cover">
-						<div class="p-5">
-							<p class="mb-1 w-max text-xs font-medium text-gray-500">{{ $berita['tanggal'] }}</p>
+            <!-- Konten Berita dalam Grid -->
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-4">
+                <!-- Berita 1 -->
+                {{-- Menggunakan foreach untuk loop card berita --}}
+                @foreach ($beritaList as $berita)
+                    <div
+                        class="group relative transform rounded-xl bg-white text-primary shadow-md transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                        <img src="{{ $berita['gambar'] }}" alt="{{ $berita['judul'] }}"
+                            class="h-48 w-full rounded-t-xl object-cover">
+                        <div class="p-5">
+                            <p class="mb-1 w-max text-xs font-medium text-gray-500">{{ $berita['tanggal'] }}</p>
 
-							<h3
-								class="line-clamp-2 text-lg font-medium transition-colors duration-300 hover:underline group-hover:text-yellow-400">
-								<a href="{{ url('/berita/detail/' . $berita['id']) }}">{{ $berita['judul'] }}</a>
+                            <h3
+                                class="line-clamp-2 text-lg font-medium transition-colors duration-300 hover:underline group-hover:text-yellow-400">
+                                <a href="{{ url('/berita/detail/' . $berita['id']) }}">{{ $berita['judul'] }}</a>
 
-							</h3>
-							{{-- <p class="text-gray-700 mb-5 duration-300 text-xs group-hover:text-gray-800">
+                            </h3>
+                            {{-- <p class="text-gray-700 mb-5 duration-300 text-xs group-hover:text-gray-800">
 								{{ $berita['deskripsi'] }}
 							</p> --}}
-						</div>
+                        </div>
 
-					</div>
-				@endforeach
+                    </div>
+                @endforeach
 
-			</div>
+            </div>
 
 			<!-- Tombol Lihat Semua Berita -->
 			<div class="mt-12 flex justify-center rounded-sm">

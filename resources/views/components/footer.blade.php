@@ -6,7 +6,19 @@
         <div class="mx-autojustify-center md:justify-start">
             <a href="#"><img src="{{ asset('img/muhammadiyah-putih.png') }}"alt="Deskripsi Gambar"
                     class="mb-2 h-56 w-full object-contain max-md:h-28"></a>
+        <!-- Logo Organisasi -->
+        <div class="mx-autojustify-center md:justify-start">
+            <a href="#"><img src="{{ asset('img/muhammadiyah-putih.png') }}"alt="Deskripsi Gambar"
+                    class="mb-2 h-56 w-full object-contain max-md:h-28"></a>
 
+        </div>
+        <!-- Informasi Kontak -->
+        <div class="text-start max-md:text-center text-white">
+            <h1 class="mb-2 text-start text-xl text-white font-bold max-md:text-center max-md:text-xl">
+                Pimpinan Daerah Muhammadiyah <br>
+                <span class="max-md:text-md  font-semibold md:text-base">Kab. Pinrang</span>
+            </h1>
+            {{-- <p class="mb-2 text-sm">Jl. Kemerdekaan No. 123, Pinrang, Sulawesi Selatan, Indonesia</p>
         </div>
         <!-- Informasi Kontak -->
         <div class="text-start max-md:text-center text-white">
@@ -56,6 +68,7 @@
     </div>
 
 
+    <!-- Copyright -->
     <!-- Copyright -->
 
 </footer>

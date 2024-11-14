@@ -53,16 +53,16 @@
 
 
 <script>
-	document.getElementById('toggle-menu').addEventListener('click', function() {
-		const mobileMenu = document.getElementById('mobile-menu');
+    document.getElementById('toggle-menu').addEventListener('click', function() {
+        const mobileMenu = document.getElementById('mobile-menu');
 
-		if (mobileMenu.classList.contains('hidden')) {
-			// Buka menu: hapus class 'hidden', set maxHeight ke tinggi konten
-			mobileMenu.classList.remove('hidden');
-			mobileMenu.style.maxHeight = mobileMenu.scrollHeight + 'px';
-		} else {
-			// Tutup menu: set maxHeight ke 0 dan tambahkan class 'hidden' setelah transisi selesai
-			mobileMenu.style.maxHeight = '0';
+        if (mobileMenu.classList.contains('hidden')) {
+            // Buka menu: hapus class 'hidden', set maxHeight ke tinggi konten
+            mobileMenu.classList.remove('hidden');
+            mobileMenu.style.maxHeight = mobileMenu.scrollHeight + 'px';
+        } else {
+            // Tutup menu: set maxHeight ke 0 dan tambahkan class 'hidden' setelah transisi selesai
+            mobileMenu.style.maxHeight = '0';
 
 			// Event listener untuk menunggu transisi selesai
 			mobileMenu.addEventListener('transitionend', function handleTransitionEnd() {
