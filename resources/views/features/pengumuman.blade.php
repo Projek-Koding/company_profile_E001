@@ -2,7 +2,7 @@
 @section('title', 'Pengumuman')
 
 @section('content')
-    <div class="w-full  overflow-hidden lg:px-12 flex flex-col items-center pt-40">
+    <div class="w-11/12 mx-auto  overflow-hidden lg:px-12 flex flex-col items-center pt-40">
         <div class="flex flex-col w-11/12 gap-5 mb-10">
             <p class="text-primary text-xl font-bold">Daftar Pengumuman</p>
             <hr>

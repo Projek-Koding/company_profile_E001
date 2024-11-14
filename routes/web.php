@@ -2,24 +2,24 @@
 
 use App\Models\Berita;
 use App\Models\Pengumuman;
+
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Route;
-
-
-
-
 
 Route::get('/', function () {
     return view('features/beranda');
 })->name('beranda');
 
+
 Route::get('/profil', function () {
     return view('features/profil');
 })->name('profil');
+
 Route::get('/berita', function () {
     $beritaList = Berita::paginate(8);
     return view('features/berita', compact('beritaList'));
 })->name('berita');
+
 
 Route::get('/berita/{slug}', function ($slug) {
     $berita = Berita::where('slug', $slug)->first();
@@ -35,10 +35,10 @@ Route::get('/pengumuman/detail/{id}', function ($id) {
     $pengumuman = Pengumuman::find($id);
     return view('features/pengumumanDetail', compact('pengumuman'));
 })->name('pengumuman-detail');
-Route::get('/madrasah', function () {
+Route::get('/majelis', function () {
     // $pengumuman = Pengumuman::find($id);
-    return view('features/madrasah');
-})->name(name: 'madrasah');
+    return view('features/majelis');
+})->name(name: 'majelis');
 Route::get('/syarat-dan-ketentuan', function () {
     // $pengumuman = Pengumuman::find($id);
     return view('features/snk');
@@ -62,3 +62,6 @@ Route::get('/syarat-dan-ketentuan', function () {
 Route::get('/tentang', function () {
     return view('features/tentang');
 })->name('tentang');
+Route::get('/majelisDetail', function () {
+    return view('features/majelisDetail');
+})->name('majelisDetail');
