@@ -44,21 +44,6 @@ Route::get('/syarat-dan-ketentuan', function () {
     return view('features/snk');
 })->name(name: 'syarat-dan-ketentuan');
 
-// Route::get('/about-us', function () {
-//     return view('features/aboutUs');
-// });
-
-// Route::get('/hubungi-kami', function () {
-//     return view('features/hubungiKami');
-
-
-// });
-
-
-// Route::get('/navbar', function () {
-//     return view('components/navbar');
-// });
-
 Route::get('/tentang', function () {
     return view('features/tentang');
 })->name('tentang');
