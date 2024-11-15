@@ -1,13 +1,16 @@
 <?php
 
+use App\Models\AnggotaMajelis;
 use App\Models\Berita;
+use App\Models\Majelis;
 use App\Models\Pengumuman;
 
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('features/beranda');
+    $listBerita = Berita::orderBy('created_at', 'desc')->limit(4)->get();
+    return view('features/beranda', compact('listBerita'));
 })->name('beranda');
 
 
@@ -16,7 +19,7 @@ Route::get('/profil', function () {
 })->name('profil');
 
 Route::get('/berita', function () {
-    $beritaList = Berita::paginate(8);
+    $beritaList = Berita::Paginate(8);
     return view('features/berita', compact('beritaList'));
 })->name('berita');
 
@@ -24,7 +27,7 @@ Route::get('/berita', function () {
 Route::get('/berita/{slug}', function ($slug) {
     $berita = Berita::where('slug', $slug)->first();
     $beritaLainnya = Berita::inRandomOrder()->take(5)->get();
-    return view('features/detailBerita', compact('berita','beritaLainnya'));
+    return view('features/detailBerita', compact('berita', 'beritaLainnya'));
 })->name('berita-detail');
 
 Route::get('/pengumuman', function () {
@@ -37,7 +40,8 @@ Route::get('/pengumuman/detail/{id}', function ($id) {
 })->name('pengumuman-detail');
 Route::get('/majelis', function () {
     // $pengumuman = Pengumuman::find($id);
-    return view('features/majelis');
+    $majelisList = Majelis::get();
+    return view('features/majelis', compact('majelisList'));
 })->name(name: 'majelis');
 Route::get('/syarat-dan-ketentuan', function () {
     // $pengumuman = Pengumuman::find($id);
@@ -47,6 +51,11 @@ Route::get('/syarat-dan-ketentuan', function () {
 Route::get('/tentang', function () {
     return view('features/tentang');
 })->name('tentang');
-Route::get('/majelisDetail', function () {
-    return view('features/majelisDetail');
+Route::get('/majelisDetail/{id}', function ($id) {
+    $majelis = Majelis::find($id);
+    $ketua = AnggotaMajelis::where('majelis_id', $id)->where('jabatan', 'ketua')->first();
+    $wakil = AnggotaMajelis::where('majelis_id', $id)->where('jabatan', 'wakil ketua')->get();
+    $sekretaris = AnggotaMajelis::where('majelis_id', $id)->where('jabatan', 'sekretaris')->get();
+    $anggotaMajelis = AnggotaMajelis::where('majelis_id', $id)->where('jabatan', 'anggota')->get();
+    return view('features/majelisDetail', compact('anggotaMajelis', 'ketua', 'wakil', 'sekretaris', 'majelis'));
 })->name('majelisDetail');

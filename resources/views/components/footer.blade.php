@@ -2,10 +2,7 @@
 <footer class="w-full bg-primary text-gray-300">
     <div class="w-10/12 mx-auto mt-2 grid grid-cols-1 justify-around gap-8 py-10 max-md:px-7 md:grid-cols-4">
 
-        <!-- Logo Organisasi -->
-        <div class="mx-autojustify-center md:justify-start">
-            <a href="#"><img src="{{ asset('img/muhammadiyah-putih.png') }}"alt="Deskripsi Gambar"
-                    class="mb-2 h-56 w-full object-contain max-md:h-28"></a>
+       
         <!-- Logo Organisasi -->
         <div class="mx-autojustify-center md:justify-start">
             <a href="#"><img src="{{ asset('img/muhammadiyah-putih.png') }}"alt="Deskripsi Gambar"

@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\BeritaResource\Pages;
 use App\Filament\Resources\BeritaResource\RelationManagers;
 use App\Models\Berita;
+// use Filament\Actions\DeleteAction;
 use Filament\Forms;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\RichEditor;
@@ -53,20 +54,31 @@ class BeritaResource extends Resource
             ->columns([
                 Tables\Columns\ImageColumn::make('gambar')
                     ->verticalAlignment(VerticalAlignment::Start),
+                Tables\Columns\TextColumn::make('created_at')
+                    ->label('Dibuat')
+                    ->verticalAlignment(VerticalAlignment::Start)
+                    ->wrap(),
+                Tables\Columns\TextColumn::make('updated_at')
+                    ->label('Diperbarui')
+                    ->verticalAlignment(VerticalAlignment::Start)
+                    ->wrap(),
                 Tables\Columns\TextColumn::make('judul')
-                    ->verticalAlignment(VerticalAlignment::Start),
+                    ->verticalAlignment(VerticalAlignment::Start)
+                    ->wrap(),
                 Tables\Columns\TextColumn::make('penulis')
                     ->verticalAlignment(VerticalAlignment::Start),
                 Tables\Columns\TextColumn::make('isi_berita')
                     ->label('Isi Berita')
                     ->formatStateUsing(fn($state) => Str::limit(strip_tags($state), 100))
-                    ->verticalAlignment(VerticalAlignment::Start),
+                    ->verticalAlignment(VerticalAlignment::Start)
+                    ->wrap(),
             ])
             ->filters([
                 //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make()
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

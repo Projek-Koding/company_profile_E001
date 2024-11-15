@@ -2,44 +2,42 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\PengumumanResource\Pages;
-use App\Filament\Resources\PengumumanResource\RelationManagers;
-use App\Models\Pengumuman;
+use App\Filament\Resources\MajelisResource\Pages;
+use App\Filament\Resources\MajelisResource\RelationManagers;
+use App\Models\Majelis;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Support\Enums\VerticalAlignment;
 use Filament\Tables;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class PengumumanResource extends Resource
+class MajelisResource extends Resource
 {
-    protected static ?string $model = Pengumuman::class;
-
+    protected static ?string $model = Majelis::class;
+    protected static ?string $navigationGroup = 'Majelis';
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?int $navigationSort = 1;
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('judul')
+                Forms\Components\TextInput::make('nama_majelis')
                     ->required(),
-                Forms\Components\TextInput::make('isi_pengumuman')
-                    ->required(),
-
             ]);
     }
 
     public static function table(Table $table): Table
     {
         return $table
+
             ->columns([
-                Tables\Columns\TextColumn::make('judul')
+                TextColumn::make('nama_majelis')
                     ->verticalAlignment(VerticalAlignment::Start),
-                Tables\Columns\TextColumn::make('isi_pengumuman')
-                    ->wrap(),
             ])
             ->filters([
                 //
@@ -65,9 +63,9 @@ class PengumumanResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListPengumumen::route('/'),
-            'create' => Pages\CreatePengumuman::route('/create'),
-            'edit' => Pages\EditPengumuman::route('/{record}/edit'),
+            'index' => Pages\ListMajelis::route('/'),
+            'create' => Pages\CreateMajelis::route('/create'),
+            'edit' => Pages\EditMajelis::route('/{record}/edit'),
         ];
     }
 }

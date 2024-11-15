@@ -10,13 +10,13 @@ class StatsOverview extends BaseWidget
 {
     protected function getStats(): array
     {
-        $berita = Berita::count();
+        // $berita = Berita::count();
         // $berita = Berita::count();
         
         return [
-            Stat::make('Jumlah Berita', $berita),
-            Stat::make('Bounce rate', '21%'),
-            Stat::make('Average time on page', '3:12'),
+            // Stat::make('Jumlah Berita', $berita),
+            // Stat::make('Bounce rate', '21%'),
+            // Stat::make('Average time on page', '3:12'),
         ];
     }
 }
